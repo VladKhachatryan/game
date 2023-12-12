@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heads and Tails</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid d-flex justify-content-center">
+      <div class="row text-center">
+        <div class="col-md-6 col-12">
+          <h2 id="p1">
+            Player-1
+            <span id="p1_count">0</span>
+          </h2>
+        </div>
+        <div class="col-md-6 col-12 align-middle">
+          <h2 id="p2">
+            Player-2
+            <span id="p2_count">0</span>
+          </h2>
+        </div>
+        <div class="col-12 align-middle">
+          <button id="start" class="btn btn-success">Start Game</button>
+          <div class="form-group">
+            <label for="xush" class="form-check-label">Heads</label>
+            <input
+              type="radio"
+              name="coin"
+              id="xush"
+              value="1"
+              class="form-check-input"
+            />
+            <label for="gir" class="form-check-label">Tails</label>
+            <input
+              type="radio"
+              name="coin"
+              id="gir"
+              value="2"
+              class="form-check-input"
+            />
+          </div>
+          <button id="player" class="btn btn-primary">Play</button>
+        </div>
+        <div id="euro">
+          <article class="back"> <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/backeuro.png" alt=""></article>
+          <article class="middle"></article>
+          <article class="middle"></article>
+          <article class="middle"></article>
+          <article class="middle"></article>
+          <article class="middle"></article>
+          <article class="middle"></article>
+          <article class="middle"></article>
+          <article class="middle"></article>
+          <article class="middle"></article>
+          <article class="front">
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/faceeuro.png"
+              alt=""
+            />
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
