@@ -28,6 +28,18 @@ start.addEventListener("click", () => {
   const round = oneOrTwo();
   const p1 = document.querySelector("#p1");
   const p2 = document.querySelector("#p2");
+  const coin = document.querySelectorAll('input[name = "coin"]');
+
+  coin.forEach((input) => input.removeAttribute("disabled"));
+  start.setAttribute("disabled", "");
+
+  coin.forEach((input) => {
+    input.addEventListener("change", () => {
+      player.removeAttribute("disabled");
+      console.log(input);
+    });
+  });
+
   if (round === 1) {
     player1.round = true;
     player2.round = false;
@@ -47,9 +59,24 @@ start.addEventListener("click", () => {
 
 player.addEventListener("click", () => {
   const animation = document.querySelector("#euro");
- 
+  const animation1 = document.querySelector("#euro1");
+  animation.style.display = "block";
+  animation1.style.display = "none";
+  setTimeout(() => {
+    animation.style.display = "none";
+    animation1.style.display = "block";
+  }, 1000);
+
   const coin = +document.querySelector('input[name="coin"]:checked').value;
   const num = oneOrTwo();
+  if (num === 1) {
+    animation1.style.backgroundImage =
+      'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/faceeuro.png")';
+  } else {
+    animation1.style.backgroundImage =
+      'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/backeuro.png")';
+  }
+  console.log(num);
   console.log(coin === num);
   if (player1.round) {
     if (coin === num) {
@@ -74,8 +101,25 @@ player.addEventListener("click", () => {
       p2.classList.remove("text-success");
     }
   }
-  animation.classList.remove("animation");
+
   player1Count.innerHTML = player1.count;
   player2Count.innerHTML = player2.count;
-  console.log(users);
+
+  if (player1.count === 5) {
+    winner(player1.name);
+  }
+
+  if (player2.count === 5) {
+    winner(player2.name);
+  }
 });
+
+function winner(player) {
+  Swal.fire({
+    title: "Winner!",
+    text: `${player}`,
+    icon: "success",
+  });
+  player1.count = 0;
+  player2.count = 0;
+}

@@ -11,10 +11,23 @@ body {
   top: 50%;
   left: 50%;
   transform-style: preserve-3d;
-  animation: spin 2.5s linear;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+#euro1 {
+  width: 150px;
+  height: 150px;
+  margin-left: -75px;
+  margin-top: -75px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
 }
 
 .back {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/backeuro.png");
   width: 150px;
   height: 150px;
 }
@@ -28,7 +41,9 @@ body {
   top: 0;
 }
 
+#front,
 .front {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/faceeuro.png");
   height: 150px;
   position: absolute;
   top: 0;
