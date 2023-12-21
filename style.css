@@ -95,3 +95,9 @@ body {
     transform: rotateY(360deg);
   }
 }
+
+.card {
+  width: 300px;
+  margin-top: 20px;
+  display: flex;
+}
