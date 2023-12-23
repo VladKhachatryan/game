@@ -17,28 +17,30 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <script defer src="./script.js"></script>
   </head>
   <body>
-    <div class="container-fluid col-12">
-      <div class="row align-items-center">
-        <div class="col-md-4 col-12 align-items-start m-auto">
-          <div class="card bg-secondary-emphasis">
-            <img src="./img/user.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <p class="card-text">Good Luck!</p>
-            </div>
-
-            <h2 id="p1">
-              Player-1
-              <span id="p1_count">0</span>
-            </h2>
-          </div>
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-6 text-center">
+          <div id="bg_avatar_1"></div>
+          <h2 id="p1">
+            Player-1
+            <span id="p1_count">0</span>
+          </h2>
+          <p id="card-text1"></p>
         </div>
-        <div class="col-md-4 align-items-center">
-          <button id="start" class="btn btn-success">Start Game</button>
-          <div class="form-group mt-4">
+        <div class="col-6 text-center">
+          <div id="bg_avatar_2"></div>
+          <h2 id="p2">
+            Player-2
+            <span id="p2_count">0</span>
+          </h2>
+          <p id="card-text"></p>
+        </div>
+        <div class="col text-center">
+          <button id="start" class="btn btn-success m-auto">Start Game</button>
+          <div class="form-group mt-4  mb-3">
             <label for="xush" class="form-check-label">
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/faceeuro.png"
@@ -70,18 +72,6 @@
             />
           </div>
           <button id="player" class="btn btn-primary" disabled>Play</button>
-        </div>
-        <div class="col-md-4 col-12 align-items-end">
-          <div class="card bg-secondary-emphasis">
-            <img src="./img/user.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <p class="card-text">Good Luck!</p>
-            </div>
-            <h2 id="p2">
-              Player-2
-              <span id="p2_count">0</span>
-            </h2>
-          </div>
         </div>
 
         <div id="euro">
