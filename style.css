@@ -1,5 +1,18 @@
 body {
-  background-color: rgb(0, 100, 0);
+  background-image: url('./img/bg-1.png');
+}
+#gir,
+#xush {
+  opacity: 0;
+}
+#gir_img,
+#xush_img {
+  cursor: pointer;
+}
+
+.active_coin {
+  border: 2px solid black;
+  border-radius: 23px;
 }
 
 #bg_avatar_1,

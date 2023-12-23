@@ -21,6 +21,8 @@ const player1Count = document.querySelector("#p1_count");
 const player2Count = document.querySelector("#p2_count");
 const test1 = document.querySelector("#card-text1");
 const test2 = document.querySelector("#card-text");
+const xush = document.querySelector("#xush_img");
+const gir = document.querySelector("#gir_img");
 
 function randomNumber(n) {
   return Math.floor(Math.random() * n) + 1;
@@ -37,7 +39,6 @@ start.addEventListener("click", () => {
   avatar1.style.backgroundImage = `url("./img/${randomNumber(10)}.png")`;
   avatar2.style.backgroundImage = `url("./img/${randomNumber(10)}.png")`;
 
-  coin.forEach((input) => input.removeAttribute("disabled"));
   start.style.display = "none";
 
   coin.forEach((input) => {
@@ -129,7 +130,6 @@ player.addEventListener("click", () => {
 });
 
 function winner(player) {
-  start.style.display = "block";
   Swal.fire({
     title: "Winner!",
     text: `${player}`,
@@ -138,3 +138,12 @@ function winner(player) {
   player1.count = 0;
   player2.count = 0;
 }
+
+xush.addEventListener("click", () => {
+  xush.classList.add("active_coin");
+  gir.classList.remove("active_coin");
+});
+gir.addEventListener("click", () => {
+  gir.classList.add("active_coin");
+  xush.classList.remove("active_coin");
+});
