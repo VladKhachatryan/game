@@ -12,6 +12,10 @@ const users = [
     round: false,
   },
 ];
+
+const body = document.querySelector("body");
+body.style.backgroundImage = `url("./img/bg/${randomNumber(4)}.png")`;
+
 const player1 = users[0];
 const player2 = users[1];
 const start = document.querySelector("#start");
@@ -36,8 +40,12 @@ start.addEventListener("click", () => {
   const avatar1 = document.querySelector("#bg_avatar_1");
   const avatar2 = document.querySelector("#bg_avatar_2");
 
-  avatar1.style.backgroundImage = `url("./img/${randomNumber(10)}.png")`;
-  avatar2.style.backgroundImage = `url("./img/${randomNumber(10)}.png")`;
+  avatar1.style.backgroundImage = `url("./img/avatars/${randomNumber(
+    10
+  )}.png")`;
+  avatar2.style.backgroundImage = `url("./img/avatars/${randomNumber(
+    10
+  )}.png")`;
 
   start.style.display = "none";
 

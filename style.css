@@ -1,5 +1,8 @@
 body {
-  background-image: url('./img/bg-1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
 #gir,
 #xush {
